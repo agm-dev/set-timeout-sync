@@ -1,4 +1,4 @@
-function setTimeoutSync(callback, ms) {
+function setTimeoutSync(ms, callback) {
   const start = Date.now()
   let now = start
 

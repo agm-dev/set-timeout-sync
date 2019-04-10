@@ -15,13 +15,18 @@ const setTimeoutSync = require('set-timeout-sync')
 
 console.log("I'm first")
 
-setTimeoutSync(function() {
+setTimeoutSync(1000)
+console.log("I'll wait a second")
+
+setTimeoutSync(2000, function() {
   console.log("I'm blocking!")
-}, 2000)
+})
 
 console.log("I'm last")
 
 // I'm first
+// <wait 1000ms>
+// I'll wait a second!
 // <wait 2000ms>
 // I'm blocking!
 // I'm last
