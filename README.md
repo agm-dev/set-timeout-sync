@@ -18,9 +18,9 @@ console.log("I'm first")
 setTimeoutSync(1000)
 console.log("I'll wait a second")
 
-setTimeoutSync(2000, function() {
+setTimeoutSync(function() {
   console.log("I'm blocking!")
-})
+}, 2000)
 
 console.log("I'm last")
 
